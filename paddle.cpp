@@ -31,3 +31,7 @@ int Paddle::getLives() {
 int Paddle::getScore() {
 	return score;
 }
+
+void Paddle::followMouse(float xPosition) {
+	x = xPosition;
+}

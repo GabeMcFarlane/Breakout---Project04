@@ -16,6 +16,7 @@ void ofApp::setup(){
 void ofApp::update(){
 	displayStats(player->getLives(), player->getScore());
 	player->draw();
+	player->followMouse(ofGetMouseX());
 }
 
 //--------------------------------------------------------------

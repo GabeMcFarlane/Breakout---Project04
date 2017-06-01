@@ -13,4 +13,5 @@ public:
 	void draw();
 	int getLives();
 	int getScore();
+	void followMouse(float xPosition);
 };
