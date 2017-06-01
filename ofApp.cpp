@@ -1,7 +1,13 @@
 #include "ofApp.h"
+#include "board.h"
+#include "ball.h"
+#include "paddle.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	ofSetBackgroundColor(0, 0, 0);
+	ofSetFrameRate(60.0);
+	ofHideCursor();
 
 }
 
