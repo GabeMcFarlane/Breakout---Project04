@@ -6,7 +6,8 @@ class Paddle {
 public:
 	float x;
 	float y;
+	int lives;
 	Paddle();
-	Paddle(float x, float y);
-	
+	Paddle(float x, float y, int lives);
+	void draw();
 };

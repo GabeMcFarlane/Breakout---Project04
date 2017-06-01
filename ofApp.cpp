@@ -9,16 +9,17 @@ void ofApp::setup(){
 	ofSetFrameRate(60.0);
 	ofHideCursor();
 
+	player = new Paddle(ofGetWidth() / 2, 20, 3);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	player->draw();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	player->draw();
 }
 
 //--------------------------------------------------------------

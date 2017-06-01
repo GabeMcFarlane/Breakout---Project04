@@ -1,10 +1,14 @@
 #pragma once
 
 #include "ofMain.h"
+#include "paddle.h"
+#include "ball.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
+		Paddle *player;
+
 		void setup();
 		void update();
 		void draw();
