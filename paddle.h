@@ -16,4 +16,5 @@ public:
 	int getScore();
 	void followMouse(float xPosition);
 	void setStarted();
+	int getX();
 };

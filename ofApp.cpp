@@ -11,9 +11,10 @@ void ofApp::setup(){
 	ofSetFrameRate(60.0);
 	ofHideCursor();
 
-	player = new Paddle((ofGetWidth() / 2) + 50, ofGetHeight() - 40, 3, 0, false);
+	player = new Paddle((ofGetWidth() / 2) - 50, ofGetHeight() - 40, 3, 0, false);
+
 	b.location = ofVec2f(ofGetWidth() / 2, ofGetHeight() / 2);
-	b.velocity = ofVec2f(0, 1);
+	b.velocity = ofVec2f(0, 3);
 }
 
 //--------------------------------------------------------------
@@ -25,6 +26,8 @@ void ofApp::update(){
 
 	b.draw();
 	b.move();
+	b.playerBounce(player->getX());
+	b.wallBounce();
 }
 
 //--------------------------------------------------------------

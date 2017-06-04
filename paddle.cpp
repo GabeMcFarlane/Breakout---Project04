@@ -12,7 +12,6 @@ Paddle::Paddle() {
 	started = false;
 }
 
-
 Paddle::Paddle(float x, float y, int lives, int score, bool started) {
 	this->x = x;
 	this->y = y;
@@ -40,4 +39,8 @@ void Paddle::followMouse(float xPosition) {
 
 void Paddle::setStarted() {
 	started = true;
+}
+
+int Paddle::getX() {
+	return x;
 }
