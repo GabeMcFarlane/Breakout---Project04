@@ -4,9 +4,23 @@
 #include "ofMain.h"
 
 
-int startScreen() {
+int startScreen(int level) {
 	ofSetColor(255, 255, 255);
-	return 0;
+	ofDrawBitmapString("Level 1 - Easy", ofGetWidth() / 2, ofGetHeight() / 2);
+	ofDrawBitmapString("Level 2 - Medium", ofGetWidth() / 2, (ofGetHeight() / 2) - 20);
+	ofDrawBitmapString("Level 3 - Hard", ofGetWidth() / 2, (ofGetHeight() / 2) - 40);
+	ofDrawBitmapString("Level 4 - What!?!?!?!", ofGetWidth() / 2, (ofGetHeight() / 2) - 60);
+	if (level == 1) {
+		return 1;
+	} else if (level == 2) {
+		return 2;
+	} else if (level == 3) {
+		return 3;
+	} else if (level == 4) {
+		return 4;
+	} else {
+		return 0;
+	}
 }
 
 void displayStats(int lives, int score) {
