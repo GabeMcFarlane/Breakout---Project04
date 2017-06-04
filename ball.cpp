@@ -5,12 +5,21 @@
 
 
 Ball::Ball() {
-	x = 0;
-	y = 0;
+	
 }
 
 
-Ball::Ball(float x, float y) {
-	this->x = x;
-	this->y = y;
+Ball::Ball(ofVec2f location, ofVec2f veocity, float acceleration) {
+	this->location = location;
+	this->velocity = velocity;
+	this->acceleration = acceleration;
+}
+
+void Ball::draw() {
+	ofSetColor(255, 0, 0);
+	ofDrawCircle(location, 10);
+}
+
+void Ball::move() {
+	location += velocity;
 }

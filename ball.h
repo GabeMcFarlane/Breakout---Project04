@@ -4,9 +4,11 @@
 
 class Ball {
 public:
-	float x;
-	float y;
+	ofVec2f location;
+	ofVec2f velocity;
+	float acceleration;
 	Ball();
-	Ball(float x, float y);
-
+	Ball(ofVec2f location, ofVec2f veocity, float acceleration);
+	void draw();
+	void move();
 };

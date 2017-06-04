@@ -9,14 +9,16 @@ Paddle::Paddle() {
 	y = 0;
 	lives = 3;
 	score = 0;
+	started = false;
 }
 
 
-Paddle::Paddle(float x, float y, int lives, int score) {
+Paddle::Paddle(float x, float y, int lives, int score, bool started) {
 	this->x = x;
 	this->y = y;
 	this->lives = lives;
 	this->score = score;
+	this->started = started;
 }
 
 void Paddle::draw() {
@@ -34,4 +36,8 @@ int Paddle::getScore() {
 
 void Paddle::followMouse(float xPosition) {
 	x = xPosition;
+}
+
+void Paddle::setStarted() {
+	started = true;
 }

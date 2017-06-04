@@ -8,10 +8,12 @@ public:
 	float y;
 	int lives;
 	int score;
+	bool started;
 	Paddle();
-	Paddle(float x, float y, int lives, int score);
+	Paddle(float x, float y, int lives, int score, bool started);
 	void draw();
 	int getLives();
 	int getScore();
 	void followMouse(float xPosition);
+	void setStarted();
 };
