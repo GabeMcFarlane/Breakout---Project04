@@ -14,4 +14,5 @@ public:
 	void move();
 	void playerBounce(float paddleX);
 	void wallBounce();
+	bool lost();
 };

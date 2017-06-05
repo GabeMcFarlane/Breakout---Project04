@@ -27,8 +27,10 @@ void Ball::move() {
 void Ball::playerBounce(float paddleX) {
 	if ((location.y + radius) >= (ofGetHeight() - 40)) {
 		if (location.x >= paddleX && location.x <= (paddleX + 100)) {
+			location.y -= 10;
 			velocity.y *= -1;
 			velocity.x = ((((paddleX + 50) - location.x) / 10) * -1);
+			velocity -= acceleration;
 		}
 	}
 }
@@ -43,5 +45,13 @@ void Ball::wallBounce() {
 	} else if ((location.y - radius) <= 0) {
 		velocity.y *= -1;
 		location.y += 10;
+	}
+}
+
+bool Ball::lost() {
+	if (location.x <= ofGetWidth()) {
+		return true;
+	} else {
+		return false;
 	}
 }
