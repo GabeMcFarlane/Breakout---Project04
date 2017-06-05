@@ -7,12 +7,14 @@
 Ball::Ball() {
 	acceleration = 1;
 	radius = 6;
+	dead = false;
 }
 
-Ball::Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius) {
+Ball::Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius, bool dead) {
 	this->location = location;
 	this->velocity = velocity;
 	this->acceleration = acceleration;
+	this->dead = dead;
 }
 
 void Ball::draw() {
@@ -49,9 +51,20 @@ void Ball::wallBounce() {
 }
 
 bool Ball::lost() {
-	if (location.x <= ofGetWidth()) {
-		return true;
+	if (location.y >= ofGetHeight()) {
+		dead = true;
 	} else {
-		return false;
+		dead = false;
 	}
+	return dead;
+}
+
+void Ball::reset() {
+	dead = false;
+	location = ofVec2f(ofGetWidth() / 2, ofGetHeight() / 2);
+	velocity = ofVec2f(0, 0);
+}
+
+void Ball::start() {
+	velocity.y = 3;
 }

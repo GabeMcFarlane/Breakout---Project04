@@ -20,7 +20,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update() {
 	if (!player->getStarted()) {
-		ofDrawBitmapString("stuff" + ofToString(player->getLevel()), 10, 10); // Checker for variables
+		ofDrawBitmapString(ofToString(player->getLevel()), 10, 10); // Checker for variables
 		startScreen();
 	} else if (player->getStarted()) {
 		displayStats(player->getLives(), player->getScore());
@@ -32,6 +32,14 @@ void ofApp::update() {
 		b.move();
 		b.playerBounce(player->getX());
 		b.wallBounce();
+		if (b.lost()) {
+			if (player->getLives() >= 0) {
+				b.reset();
+				player->looseLife();
+			} else if (player->getLives() < 0) {
+				player->resetStarted(); // Game Over - return to start screen
+			}
+		}
 	}
 }
 
@@ -67,6 +75,10 @@ void ofApp::keyPressed(int key){
 		else if (key == '4') {
 			player->setLevel(4);
 			player->setStarted();
+		}
+	} else if (player->getStarted()) {
+		if (key == VK_SPACE) {
+			b.start();
 		}
 	}
 }

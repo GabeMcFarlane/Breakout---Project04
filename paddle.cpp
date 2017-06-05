@@ -30,7 +30,7 @@ int Paddle::getLives() {
 	return lives;
 }
 
-void Paddle::looseLives() {
+void Paddle::looseLife() {
 	lives--;
 }
 
@@ -44,6 +44,10 @@ void Paddle::followMouse(float xPosition) {
 
 void Paddle::setStarted() {
 	started = true;
+}
+
+void Paddle::resetStarted() {
+	started = false;
 }
 
 bool Paddle::getStarted() {
