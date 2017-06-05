@@ -1,4 +1,4 @@
 #pragma once
 
-int startScreen(int level);
+void startScreen();
 void displayStats(int lives, int score);

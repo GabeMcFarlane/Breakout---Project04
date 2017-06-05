@@ -30,6 +30,10 @@ int Paddle::getLives() {
 	return lives;
 }
 
+void Paddle::looseLives() {
+	lives--;
+}
+
 int Paddle::getScore() {
 	return score;
 }

@@ -19,10 +19,10 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update() {
-	if (player->getStarted() == false) {
-		ofDrawBitmapString("stuff" + ofToString(player->getLevel()), 10, 10);
-		startScreen(0); // Add level selection
-	} else if (player->getStarted() == true) {
+	if (!player->getStarted()) {
+		ofDrawBitmapString("stuff" + ofToString(player->getLevel()), 10, 10); // Checker for variables
+		startScreen();
+	} else if (player->getStarted()) {
 		displayStats(player->getLives(), player->getScore());
 
 		player->draw();
@@ -37,10 +37,10 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	if (player->getStarted() == false) {
-		ofDrawBitmapString("stuff" + ofToString(player->getLevel()), 10, 10); // checker for variables
-		startScreen(0);
-	} else if (player->getStarted() == true) {
+	if (!player->getStarted()) {
+		ofDrawBitmapString("stuff" + ofToString(player->getLevel()), 10, 10); // Checker for variables
+		startScreen();
+	} else if (player->getStarted()) {
 		displayStats(player->getLives(), player->getScore());
 
 		player->draw();
@@ -51,7 +51,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if (player->getStarted() == false) {
+	if (!player->getStarted()) {
 		if (key == '1') {
 			player->setLevel(1);
 			player->setStarted();

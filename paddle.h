@@ -14,6 +14,7 @@ public:
 	Paddle(float x, float y, int lives, int score, bool started, int level);
 	void draw();
 	int getLives();
+	void looseLives();
 	int getScore();
 	void followMouse(float xPosition);
 	void setStarted();
