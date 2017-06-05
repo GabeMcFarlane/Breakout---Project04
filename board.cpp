@@ -6,10 +6,12 @@
 
 int startScreen(int level) {
 	ofSetColor(255, 255, 255);
-	ofDrawBitmapString("Level 1 - Easy", ofGetWidth() / 2, ofGetHeight() / 2);
-	ofDrawBitmapString("Level 2 - Medium", ofGetWidth() / 2, (ofGetHeight() / 2) - 20);
-	ofDrawBitmapString("Level 3 - Hard", ofGetWidth() / 2, (ofGetHeight() / 2) - 40);
-	ofDrawBitmapString("Level 4 - What!?!?!?!", ofGetWidth() / 2, (ofGetHeight() / 2) - 60);
+	ofDrawBitmapString("Bustout!", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) - 40);
+	ofDrawBitmapString("Level 1 - Easy", (ofGetWidth() / 2) - 40, ofGetHeight() / 2);
+	ofDrawBitmapString("Level 2 - Medium", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 20);
+	ofDrawBitmapString("Level 3 - Hard", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 40);
+	ofDrawBitmapString("Level 4 - What!?!?!?!", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 60);
+	ofDrawBitmapString("Use keys 1, 2, 3 or 4 to select your starting level!", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 80);
 	if (level == 1) {
 		return 1;
 	} else if (level == 2) {

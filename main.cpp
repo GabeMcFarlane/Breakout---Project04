@@ -1,3 +1,6 @@
+// Gabriel McFarlane
+// Project 4 - Breakout recreation
+
 #include "ofMain.h"
 #include "ofApp.h"
 

@@ -10,9 +10,10 @@ Paddle::Paddle() {
 	lives = 3;
 	score = 0;
 	started = false;
+	level = 0;
 }
 
-Paddle::Paddle(float x, float y, int lives, int score, bool started) {
+Paddle::Paddle(float x, float y, int lives, int score, bool started, int level) {
 	this->x = x;
 	this->y = y;
 	this->lives = lives;
@@ -41,6 +42,19 @@ void Paddle::setStarted() {
 	started = true;
 }
 
+bool Paddle::getStarted() {
+	return started;
+}
+
 int Paddle::getX() {
 	return x;
 }
+
+void Paddle::setLevel(int key) {
+	level = key;
+}
+
+int Paddle::getLevel() {
+	return level;
+}
+
