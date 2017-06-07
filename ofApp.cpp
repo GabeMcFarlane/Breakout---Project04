@@ -3,6 +3,7 @@
 #include "ball.h"
 #include "paddle.h"
 #include "stage.h"
+#include "block.h"
 
 Ball b;
 

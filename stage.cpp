@@ -2,6 +2,7 @@
 
 #include "stage.h"
 #include "ofMain.h"
+#include "block.h"
 
 Stage::Stage() {
 	blocks = 0;

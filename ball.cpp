@@ -4,16 +4,20 @@
 #include "ofMain.h"
 
 Ball::Ball() {
+	location = ofVec2f(0, 0);
+	velocity = ofVec2f(0, 0);
 	acceleration = 1;
 	radius = 6;
 	dead = false;
+	color = ofColor(255, 255, 255);
 }
 
-Ball::Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius, bool dead) {
+Ball::Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius, bool dead, ofColor color) {
 	this->location = location;
 	this->velocity = velocity;
 	this->acceleration = acceleration;
 	this->dead = dead;
+	this->color = color;
 }
 
 void Ball::draw() {

@@ -11,7 +11,7 @@ void startScreen() {
 	ofDrawBitmapString("Level 2 - Medium", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 20);
 	ofDrawBitmapString("Level 3 - Hard", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 40);
 	ofDrawBitmapString("Level 4 - What!?!?!?!", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 60);
-	ofDrawBitmapString("Use keys 1, 2, 3 or 4 to select your starting level!", (ofGetWidth() / 2) - 40, (ofGetHeight() / 2) + 80);
+	ofDrawBitmapString("Use keys 1, 2, 3 or 4 to select your starting level!", 100, (ofGetHeight() / 2) + 80);
 }
 
 void displayStats(int lives, int score) {

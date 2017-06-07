@@ -4,6 +4,7 @@
 #include "paddle.h"
 #include "ball.h"
 #include "stage.h"
+#include "block.h"
 
 class ofApp : public ofBaseApp{
 

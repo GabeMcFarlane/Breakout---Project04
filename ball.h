@@ -9,8 +9,9 @@ public:
 	float acceleration;
 	int radius;
 	bool dead;
+	ofColor color;
 	Ball();
-	Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius, bool dead);
+	Ball(ofVec2f location, ofVec2f veocity, float acceleration, int radius, bool dead, ofColor color);
 	void draw();
 	void move();
 	void playerBounce(float paddleX);
