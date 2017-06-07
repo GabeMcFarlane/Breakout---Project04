@@ -5,9 +5,9 @@
 class Block {
 public:
 	int health;
-	ofColor color;
 	ofVec2f location;
+	ofColor color;
 	Block();
-	Block(int health, ofColor color, ofVec2f location);
+	Block(int health, ofVec2f location, ofColor color);
 	void draw(ofVec2f coordinates);
 };

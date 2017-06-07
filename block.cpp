@@ -5,14 +5,14 @@
 
 Block::Block() {
 	health = 1;
-	color = ofColor(255, 255, 255);
 	location = ofVec2f(0, 0);
+	color = ofColor(255, 255, 255);
 }
 
-Block::Block(int health, ofColor color, ofVec2f location) {
+Block::Block(int health, ofVec2f location, ofColor color) {
 	this->health = health;
-	this->color = color;
 	this->location = location;
+	this->color = color;
 }
 
 void Block::draw(ofVec2f location) {
