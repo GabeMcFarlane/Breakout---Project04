@@ -3,7 +3,6 @@
 #include "ball.h"
 #include "ofMain.h"
 
-
 Ball::Ball() {
 	acceleration = 1;
 	radius = 6;
@@ -32,7 +31,9 @@ void Ball::playerBounce(float paddleX) {
 			location.y -= 10;
 			velocity.y *= -1;
 			velocity.x = ((((paddleX + 50) - location.x) / 10) * -1);
-			velocity -= acceleration;
+			if (velocity.y < 15) {
+				velocity -= acceleration;
+			}
 		}
 	}
 }

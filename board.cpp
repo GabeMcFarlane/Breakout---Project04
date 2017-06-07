@@ -24,5 +24,5 @@ void displayStats(int lives, int score) {
 	ofDrawBitmapString(str_fps, 10, 40);
 	ofDrawBitmapString("Score: " + ofToString(score), (ofGetWidth() - 100), 20);
 	ofDrawBitmapString("Lives: " + ofToString(lives), (ofGetWidth() - 100), 40);
-	ofDrawBitmapString("Controls: Use the mouse to control the paddle and bounce the ball!", ofGetWidth() / 2, 20);
+	ofDrawBitmapString("Controls: Use the 'mouse' to control the paddle and bounce the ball and 'space' to start the game!", ofGetWidth() / 2, 20);
 }

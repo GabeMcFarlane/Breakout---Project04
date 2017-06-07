@@ -2,6 +2,7 @@
 #include "board.h"
 #include "ball.h"
 #include "paddle.h"
+#include "stage.h"
 
 Ball b;
 
@@ -14,7 +15,7 @@ void ofApp::setup(){
 	player = new Paddle((ofGetWidth() / 2) - 50, ofGetHeight() - 40, 3, 0, false, 0);
 
 	b.location = ofVec2f(ofGetWidth() / 2, ofGetHeight() / 2);
-	b.velocity = ofVec2f(0, 3);
+	b.velocity = ofVec2f(0, 0);
 }
 
 //--------------------------------------------------------------

@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "paddle.h"
 #include "ball.h"
+#include "stage.h"
 
 class ofApp : public ofBaseApp{
 
