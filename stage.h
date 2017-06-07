@@ -1,16 +1,17 @@
 #pragma once
 
 #include "ofMain.h"
-#include "block.h"
 
 class Stage {
 public:
 	int blocks;
-	vector<Block> rowOne;
-	vector<Block> rowTwo;
-	vector<Block> rowThree;
-	vector<Block> rowFour;
+	vector<string> rowOne;
+	vector<string> rowTwo;
+	vector<string> rowThree;
+	vector<string> rowFour;
 	Stage();
-	Stage(int blocks, vector<Block> rowOne, vector<Block> rowTwo, vector<Block> rowThree, vector<Block> rowFour);
-	void spawnBlocks(int level);
+	Stage(int blocks, vector<string> rowOne, vector<string> rowTwo, vector<string> rowThree, vector<string> rowFour);
+	void loadLevel(int level);
+	string getLevel(int level, int column);
+	int getBlocks();
 };

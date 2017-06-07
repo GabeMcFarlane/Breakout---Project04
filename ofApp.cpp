@@ -15,6 +15,8 @@ void ofApp::setup(){
 
 	player = new Paddle((ofGetWidth() / 2) - 50, ofGetHeight() - 40, 3, 0, false, 0);
 
+	currentStage = new Stage();
+
 	b.location = ofVec2f(ofGetWidth() / 2, ofGetHeight() / 2);
 	b.velocity = ofVec2f(0, 0);
 }
@@ -25,6 +27,7 @@ void ofApp::update() {
 		ofDrawBitmapString(ofToString(player->getLevel()), 10, 10); // Checker for variables
 		startScreen();
 	} else if (player->getStarted()) {
+
 		displayStats(player->getLives(), player->getScore());
 
 		player->draw();

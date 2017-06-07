@@ -4,10 +4,11 @@
 
 class Block {
 public:
+	int size;
 	int health;
 	ofVec2f location;
 	ofColor color;
 	Block();
-	Block(int health, ofVec2f location, ofColor color);
-	void draw(ofVec2f coordinates);
+	Block(int size, int health, ofVec2f location, ofColor color);
+	void draw(int row, int xLocation, int level);
 };

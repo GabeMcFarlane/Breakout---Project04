@@ -10,6 +10,8 @@ class ofApp : public ofBaseApp{
 
 	public:
 		Paddle *player;
+		Stage *currentStage;
+		vector<Block> blocks;
 
 		void setup();
 		void update();
